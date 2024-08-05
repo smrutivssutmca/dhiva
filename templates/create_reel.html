@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{user_profile.user.username}}</title>
+    <link rel="icon" type="image/png" href="/static/dlogo.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/static/dlogo.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/static/dlogo.png" sizes="96x96">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+   <link rel="stylesheet" href="/static/homemobile2.css">
+   <link rel="stylesheet" href="/static/profilemobile.css">
+   <link rel="stylesheet" href="/static/stylenav.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  </head>
+  <style>
+    .coveer{
+      background-image: url('{{user_profile.cover.url}}');
+    }
+    body,.farmm{
+background-color: #cdcfd1;
+    }
+    .icon{
+      opacity: 0.8;
+    }
+    .navbar{
+      background-color: white;
+      /* box-shadow: 2px 2px 5px grey; */
+        min-width: 1rem;
+position: fixed;
+width: 100%;
+z-index: 10;
+
+    }
+    .navbar2{
+      background-color: white;
+      /* box-shadow: 2px 2px 5px grey; */
+        min-width: 30rem;
+/* position: fixed; */
+width: 100%;
+z-index: 10;
+
+    }
+.top0{
+  top: 0;
+}
+    .container{
+        margin-top: 70px;
+        display: flex;
+        justify-content: center;
+    }
+    .navbar-collapse{
+      justify-content: space-between;
+    }
+    .mrr{
+     
+      margin-right: 5px;
+    }
+    .flx{
+        display: flex;
+    }
+    .andi2{
+      margin: auto;
+    margin-bottom: 4px;
+    /* width: 16px; */
+    font-size: 1.2rem;
+    }
+    .andi{
+      margin: auto;
+    margin-bottom: 4px;
+    opacity: 0.8;
+    font-size: 1rem;
+    }
+    .navbar-brand2 {
+      color: white;
+      
+    margin-right: 1rem;
+    border-radius: 5px;
+    width: 72px;
+    height: 36px;
+    font-size: 1rem;
+    display: flex;
+    white-space: nowrap;
+    background-color: white;
+}
+    .navbar-brand{
+      margin-right: 1rem;
+      border-radius: 5px;
+      width: 39px;
+      height: 36px;
+      font-size: 1rem;
+      display: flex;
+      white-space: nowrap;
+    background-color: #cdcfd1;
+}
+.likediv{
+  display: flex;
+  align-items: center;
+}
+.top{
+  margin-top: 90px;
+}
+.carousel-inner{
+    display: flex;
+    margin-top: 20px;
+}
+.carousel-item{
+    width: 85%;
+    /* background-color: red; */
+    background-image: url('{{user_profile.cover.url}}');
+    background-size: cover;
+    height: 25rem;
+    margin: auto;
+    margin-bottom: 100px;
+    border-radius: 20px;
+}
+.follow{
+    align-items: center;
+}
+.like{
+  background: none;
+  outline: none;
+  border: 0;
+  margin-right: 0px;
+  margin-bottom: 10px;
+}
+.likediv{
+  display: flex;
+  align-items: center;
+}
+.fdetails{
+    margin-right: 20px;
+    color: white;
+    font-weight: bold;
+  text-shadow: 1px 1px 1px black;
+  /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+
+}
+.pphoto{
+    width: 170px;
+    border-radius: 90px;
+    border: 4px solid white;
+}
+.pibtn{
+  width: 2.3rem;
+    border-radius: 5px;
+}
+.navbar-brand :hover{
+  color: #1F2328;
+  opacity: 1;
+}
+.followbtn{
+  height: 30px;
+ display: flex;
+ align-items: center;
+ margin-bottom: 10px;
+font-weight: 500;
+text-shadow: 1px 1px 1px rgb(0, 0, 0);
+/* border: 2px solid black;
+ */
+ box-shadow: 1px 1px 4px #00000085;
+}
+.andarli{
+    margin-top: 270px;
+    margin-left: 40px;
+    margin-right: 40px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+}
+.carousel{
+  width: 60%;
+}
+.avatar-xxl {
+    width: 8rem;
+    height: 8rem;}
+    .avatar-img{
+      width: 100%;
+    }
+    .proffile{
+width: 50%;
+margin-left: 150px;
+    }
+    .rightside{
+      width: 27%;
+      margin-left: 40px;
+    }
+.mt-n5{
+  margin-top: -3rem;
+}
+.n33{
+  font-weight: bold;
+  color: gray;
+}
+.list-inline-item{
+  color: rgb(112, 112, 112);
+  font-size: 96%;
+}
+.card-footer{
+  background-color: white;
+}
+    .h-200px{
+      height: 200px;
+    }
+    .postprofile{
+  width: 48px;
+    height: 48px;
+    border-radius: 50px;
+    border: 2px solid rgb(255 255 255);
+}
+.divatra{
+  border: 2px solid #1F2328;
+    height: 52px;
+    width: 52px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 50px;
+}
+.iopo{
+  padding: 14px;
+  padding-bottom: 0;
+}
+.plink{
+  color: black;
+  font-weight: 600;
+  margin-left: 10px;
+  /* margin-bottom: 5px; */
+  font-size: 110%;
+  text-decoration: none;
+}
+.design{
+  display: flex;
+  align-items: center;
+}
+.casew{
+  display: flex;
+  align-items: center;
+}
+.desti{
+  margin-top: 0;
+    margin-left: 10px;
+    font-size: 85%;
+    margin-bottom: 1rem;
+    color: gray;
+}
+.colmd{
+  width: 26.33%;
+}
+.desti2{
+  margin-top: 0;
+    margin-left: 5px;
+    font-size: 85%;
+    margin-bottom: 1rem;
+    color: gray;
+}
+.profilenone{
+  width: 100%;
+}
+.postimgh{
+ 
+  
+    border-radius: 20px;
+    
+}
+.btn-primary-soft{
+  transition: all 0.3s ease-in-out;
+  color: #1F2328;
+    background-color: rgba(15, 111, 236, 0.1);
+}
+.btn-primary-soft:hover {
+    color: #fff;
+    background-color: #1F2328;
+    transition: all 0.3s ease-in-out;
+}
+.top{
+  display: flex;
+}
+.caption{
+  margin-top: 0;
+  margin-left: 16px;
+    margin-bottom: 1rem;
+    font-size: 98%;
+    color: rgb(83, 83, 83);
+}
+
+/* followeing */
+.avatar-story {
+    position: relative;
+    padding: 4px;
+    z-index: 1;
+}
+.avatar-xl {
+    height: 5.125rem;
+    width: 5.125rem;
+}
+.frndsection{
+  margin-top:30px;
+}
+.avatar {
+    height: 6rem;
+    width: 6rem;
+    position: relative;
+    display: inline-block;
+    -ms-flex-negative: 0 !important;
+    flex-shrink: 0 !important;
+}
+.btn-danger-soft {
+  color: #d6293e;
+  background-color: rgba(214, 41, 62, 0.1);
+}
+#profileAction2:hover,.proffff:hover{
+  background-color: #1F2328;
+  color: white;
+  border-color: white;
+}
+.btn-danger-soft:hover {
+  color: #fff;
+  background-color: #d6293e;
+}
+.dots{
+  padding: 14px;
+  padding-top: 0;
+  font-size: 150%;
+}
+.ultrasonic{
+  justify-content: space-between;
+}
+  </style>
+  <body> 
+   
+    <nav class="navbar navbar-expand-lg top0 fstnav ">
+      <div class="container-fluid">
+        <a class="navbar-brand2 jsflex logo-background" href="/">
+          <img class="light-mode-item navbar-brand-item hww"  src="/static/dlogo.png" alt="logo">
+          <!-- <i class="andi2 bi bi-facebook"></i> -->
+
+          
+          
+          
+        </a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          
+          <!-- <form class="d-flex" rol>
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            
+          </form> -->
+          <div class=" nav mt-3 mt-lg-0 flex-nowrap align-items-center px-4 px-lg-0">
+            <div class="nav-item w-100">
+              <form class="rounded position-relative" method="post" action="/search">
+                {% csrf_token %}
+                <input class="farmm form-control ps-5 bg-light" type="search" placeholder="Search..." aria-label="Search" name="searchu">
+                <button class="btn bg-transparent px-2 py-0 position-absolute top-50 start-0 translate-middle-y" type="submit"><i class="icon bi bi-search fs-5"> </i></button>
+              </form>
+            </div>
+          </div>
+
+         <ul class="navbar-nav mb-2 mb-lg-0 mrr" >
+          
+          <li class="nav-item">
+            <a class="navbar-brand" href="#" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <i class="andi bi bi-plus"></i>
+             
+
+           </a>
+          
+          </li>
+          
+          <li class="nav-item">
+            <a class="navbar-brand" href="/chat">
+              <i class="andi bi bi-chat-left-text-fill"></i>
+           </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="navbar-brand" href="/psettings">
+              <i class="andi bi bi-gear-fill"></i>
+           </a>
+            
+          </li>
+          <li class="nav-item">
+            <a class="" href="/profile/{{user_own.user}}">
+               <!-- <i class="andi bi bi-emoji-smile-fill"></i>  -->
+              <img href="/psettings" class="pibtn" src="{{user_own.file.url}}" alt="n">
+           </a>
+          </li>
+        </ul>
+          
+        </div>
+      </div>
+    </nav>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Upload Post</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form action="/upload" method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+
+              <div class="mb-3">
+                <label for="image" class="form-label">Photo</label>
+                <input type="file" class="form-control" name="uphoto" id="image" placeholder="name@example.com">
+              </div>
+              <div class="mb-3">
+                <label for="txt" class="form-label">Caption Here</label>
+                <textarea class="form-control" id="txt" name="caption" placeholder="caption here..." rows="3"></textarea>
+              </div>
+
+                    
+                      
+                      
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </div>
+                  </form>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+    <nav class="navbar fixed-top mobilenav social" style="position: absolute;">
+      <p class="dhiva">
+        <a class="navbar-brand2 jsflex logo-background" href="/">
+          <img class="light-mode-item navbar-brand-item hww"  src="/static/dlogo.png" alt="logo">
+        </a>
+      </p>
+    </nav>
+    
+    <nav class="navbar navbar-dark bg-transparent fixed-bottom mobilenav" style="min-width:1rem ;justify-content: center;padding-bottom: 0;">
+     
+      <ul class="navigation">
+        <li>
+          <a href="/">
+            <span class="icon" style="opacity: 1;">
+              <ion-icon name="home-outline"></ion-icon>
+            </span>
+            <!-- <span class="text">Home</span> -->
+          </a>
+        </li>
+        <li>
+          <a href="/search">
+            <span class="icon" style="opacity: 1;">
+              <!-- <ion-icon name="person-outline"></ion-icon> -->
+              <ion-icon name="search-outline"></ion-icon>
+            </span>
+            <!-- <span class="text">Search</span> -->
+          </a>
+        </li>
+        <li>
+          <a href="/chat">
+            <span class="icon" style="opacity: 1;">
+              <ion-icon name="chatbubble-outline"></ion-icon>
+            </span>
+            <!-- <span class="text">Messages</span> -->
+          </a>
+        </li>
+        <li class="active">
+          <!-- <a href="/profile/{{user_profile.user}}"> -->
+          <a href="/profile/{{user_own.user}}">
+            <span class="icon" style="opacity: 1;">
+              <ion-icon name="person-outline"></ion-icon>
+            </span>
+            <!-- <span class="text">Profile</span> -->
+          </a>
+        </li>
+        <li>
+          <a href="/psettings">
+            <span class="icon" style="opacity: 1;">
+              <ion-icon name="caret-forward-circle-outline"></ion-icon>
+            </span>
+            <!-- <span class="text">Settings</span> -->
+          </a>
+        </li>
+        <div class="indicator"></div>
+      </ul>
+    </nav>
+        <h2>Upload a Reel</h2>
+        <form method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit">Upload</button>
+        </form>
+</div>
+</main>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+      // const list = document.querySelectorAll('.navigation li');
+      // function activelink(){
+      //   list.forEach((item) =>
+      //   item.classList.remove('active'));
+      //   this.classList.add('active');
+      // }
+      // list.forEach((item) =>
+      // item.addEventListener('click', activelink));
+    </script>
+    <script>
+
+for(let i=1;i<={{posts|length}};i++){
+ 
+  document.getElementById('cardio2'+i).src='{{user_profile.file.url}}'
+  document.getElementById('parole2'+i).innerHTML='{{user_profile.role}}'
+  document.getElementById('palocasion2'+i).innerHTML='{{user_profile.location}}'
+ 
+}
+for(let i=1;i<={{posts|length}};i++){
+ 
+  document.getElementById('cardio'+i).src='{{user_profile.file.url}}'
+  document.getElementById('parole'+i).innerHTML='{{user_profile.role}}'
+  document.getElementById('palocasion'+i).innerHTML='{{user_profile.location}}'
+ 
+}
+
+      function doaba(e) {
+  
+        console.log(e)
+      // e.preventDefault()
+      // let postid=document.getElementById('e').value;
+      let postid=e.slice(7)
+      
+      
+      console.log(postid)
+      let imageform=document.getElementById(`formforlike`+postid)
+      
+      let csrf = document.getElementsByName('csrfmiddlewaretoken')
+      
+      let user= '{{user_own.user}}'
+      console.log(user)
+      const fd = new FormData();
+                  fd.append('csrfmiddlewaretoken', csrf[0].value)
+                  fd.append('postid',postid)
+                  fd.append('username',user)
+      
+      
+      
+                  $.ajax({
+                      type:'POST',
+                      url: imageform.action,
+                      enctype: 'multipart/form-data',
+                      data: fd,
+                      success: function(response){
+                          console.log('success', response)
+                          // $('#formforlike'+postid)[0].reset();
+                          let zz=JSON.stringify(response)
+                          let nl=document.getElementById(`l${postid}`).innerHTML
+                         document.getElementById(`l${postid}`).innerHTML=zz[11]
+                          // e.preventDefault()
+                          if(zz[11]>nl){
+                    document.getElementById(`likebtn${postid}`).style.color='#0061ff';}
+                    else{
+                      document.getElementById(`likebtn${postid}`).style.color='black';  
+                    }
+                      },
+                      error: function(error){
+                          console.log('error', error)
+                          
+                      },
+                      cache: false,
+                      contentType: false,
+                      processData: false,
+                  })
+                  
+      };
+      
+      function doaba2(e) {
+  
+        console.log(e)
+      // e.preventDefault()
+      // let postid=document.getElementById('e').value;
+      let postid=e.slice(8)
+      
+      
+      console.log(postid)
+      let imageform2=document.getElementById(`formforlike2`+postid)
+      
+      let csrf = document.getElementsByName('csrfmiddlewaretoken')
+      
+      let user= '{{user_own.user}}'
+      const fd = new FormData();
+                  fd.append('csrfmiddlewaretoken', csrf[0].value)
+                  fd.append('postid',postid)
+                  fd.append('username',user)
+      
+      
+      
+                  $.ajax({
+                      type:'POST',
+                      url: imageform2.action,
+                      enctype: 'multipart/form-data',
+                      data: fd,
+                      success: function(response){
+                          console.log('success', response)
+                          // $('#formforlike'+postid)[0].reset();
+                          let zz=JSON.stringify(response)
+                          
+                          let nl=document.getElementById(`l2${postid}`).innerHTML
+                         document.getElementById(`l2${postid}`).innerHTML=zz[11]
+                          // e.preventDefault()
+                          if(zz[11]>nl){
+                    document.getElementById(`likebtn2${postid}`).style.color='#0061ff';}
+                    else{
+                      document.getElementById(`likebtn2${postid}`).style.color='black';  
+                    }
+                          // e.preventDefault()
+                      },
+                      error: function(error){
+                          console.log('error', error)
+                          
+                      },
+                      cache: false,
+                      contentType: false,
+                      processData: false,
+                  })
+                  
+      };
+      
+      $('#seeall').click(function(){
+
+        if(document.getElementById('vichliid').style.display=='flex'){
+          document.getElementById('vichliid').style.display='none';
+        document.getElementById('seeall').innerHTML='See all Posts';
+        }
+        else{
+        document.getElementById('vichliid').style.display='flex';
+        document.getElementById('seeall').innerHTML='Hide all Posts';
+        }
+      });
+
+//       function delay (URL) {
+//     setTimeout( function() { window.location = URL }, 500 );
+// }
+
+{% for it in likedpostsid %}
+if(document.getElementById('likebtn{{it}}')){
+document.getElementById('likebtn{{it}}').style.color='#0061ff';}
+
+{% endfor %}
+{% for it in likedpostsid %}
+if(document.getElementById('likebtn2{{it}}')){
+document.getElementById('likebtn2{{it}}').style.color='#0061ff';}
+
+{% endfor %}
+
+    </script>
+  </body>
+</html>
