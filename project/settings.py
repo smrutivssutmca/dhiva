@@ -95,11 +95,22 @@ WSGI_APPLICATION = 'project.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'socialdb_bi8x',
+#         'USER': 'socialuser',
+#         'PASSWORD': 'iiu3YIgdqUrc8QDofFPjSi9VSbrWRDMm',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
+
 # Replace the SQLite DATABASES configuration with PostgreSQL:
 DATABASES = {
     'default': dj_database_url.config(
         # Replace this value with your local database's connection string.
-        default='postgresql://socialuser:iiu3YIgdqUrc8QDofFPjSi9VSbrWRDMm@dpg-cqo9vurv2p9s73amdo40-a/socialdb_bi8x',
+        default='postgresql://socialuser:iiu3YIgdqUrc8QDofFPjSi9VSbrWRDMm@dpg-cqo9vurv2p9s73amdo40-a.singapore-postgres.render.com/socialdb_bi8x',
         conn_max_age=600
     )
 }
