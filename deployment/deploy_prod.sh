@@ -4,7 +4,7 @@ echo $current_dir
 echo $USER
 
 ssh -T ubuntu@34.239.105.141 <<EOF
-  cd project/YoBook
+  cd project/dhiva
   git pull
   cd sclone
   sudo docker-compose build

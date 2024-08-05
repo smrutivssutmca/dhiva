@@ -7,7 +7,7 @@
     justify-content: center;
 }
 .hww{
-    width: 25px;
+    width: 65px;
     height: 25px;
 }
 .vichlacard{
@@ -33,6 +33,13 @@
 .logo-background {
     background-color: white;
 }
+
+.maximized-logo {
+    max-width: 100%; /* Ensure the logo does not exceed the width of its container */
+    height: auto; /* Maintain the aspect ratio */
+    max-height: 100%; /* Ensure the logo does not exceed the height of its container */
+}
+
 
 
 /* nomobileend */
@@ -128,7 +135,7 @@
     /* transform: translateY(36px); */
     /* animation: wiper 1s; */
    }
-   .YoBook{
+   .dhiva{
     padding: 17px;
     padding-bottom: 0;
     color: #0080ff;
