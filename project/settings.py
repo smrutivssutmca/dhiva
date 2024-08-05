@@ -106,15 +106,17 @@ WSGI_APPLICATION = 'project.wsgi.application'
 #     }
 # }
 
+# postgresql://socialuser:iiu3YIgdqUrc8QDofFPjSi9VSbrWRDMm@dpg-cqo9vurv2p9s73amdo40-a.singapore-postgres.render.com/socialdb_bi8x
+
+
 # Replace the SQLite DATABASES configuration with PostgreSQL:
 DATABASES = {
     'default': dj_database_url.config(
         # Replace this value with your local database's connection string.
-        default='postgresql://socialuser:iiu3YIgdqUrc8QDofFPjSi9VSbrWRDMm@dpg-cqo9vurv2p9s73amdo40-a.singapore-postgres.render.com/socialdb_bi8x',
+        default='postgresql://socialuser:iiu3YIgdqUrc8QDofFPjSi9VSbrWRDMm@dpg-cqo9vurv2p9s73amdo40-a/socialdb_bi8x',
         conn_max_age=600
     )
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
