@@ -256,6 +256,7 @@ def tempp(request):
     if form.is_valid():
         print('valid')
         photo=form.cleaned_data['file']
+        print(photo)
         user_profile.file.delete()
         user_profile.file=photo
 

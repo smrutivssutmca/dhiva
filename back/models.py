@@ -9,11 +9,25 @@ from io import BytesIO
 # from pil import Im
 # imp
 from django.core.files import File
+from django.utils.timezone import now
+import os
 
 from datetime import date, datetime
 
 User=get_user_model()
 # Create your models here.
+
+def user_image_directory_path(instance, filename):
+    # file will be uploaded to MEDIA_ROOT/user_<id>/<filename>
+    base, extension = os.path.splitext(filename)
+    new_filename = f"{instance.user.id}_{now().strftime('%Y%m%d%H%M%S')}{extension}"
+    return f'images/{new_filename}'
+
+def user_cover_image_directory_path(instance, filename):
+    # file will be uploaded to MEDIA_ROOT/user_<id>/<filename>
+    base, extension = os.path.splitext(filename)
+    new_filename = f"{instance.user.id}_{now().strftime('%Y%m%d%H%M%S')}{extension}"
+    return f'coverimages/{new_filename}'
 
 class Profile(models.Model):
     user= models.ForeignKey(User,on_delete=models.CASCADE)
@@ -25,8 +39,8 @@ class Profile(models.Model):
     fname= models.CharField(max_length=100,default="Mr./Mrs.")
     lname= models.CharField(max_length=100,default="Unknown",)
     status= models.CharField(max_length=100,default="Unknown",)
-    file = models.ImageField(upload_to='images',default='default/defaultprofile.jpg')
-    cover = models.ImageField(upload_to='coverimages',default='default/blank.png')
+    file = models.ImageField(upload_to=user_image_directory_path,default='default/defaultprofile.jpg')
+    cover = models.ImageField(upload_to=user_cover_image_directory_path,default='default/blank.png')
     joining=models.DateField(default=date.today)
     dob=models.DateField(default=date.today)
 
