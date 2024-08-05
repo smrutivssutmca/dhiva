@@ -99,7 +99,7 @@ WSGI_APPLICATION = 'project.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(
         # Replace this value with your local database's connection string.
-        default='postgresql://postgres:postgres@localhost:5432/mysite',
+        default='postgresql://socialuser:iiu3YIgdqUrc8QDofFPjSi9VSbrWRDMm@dpg-cqo9vurv2p9s73amdo40-a/socialdb_bi8x',
         conn_max_age=600
     )
 }
