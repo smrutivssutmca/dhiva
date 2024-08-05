@@ -26,6 +26,9 @@ from django.contrib.auth.models import User, auth
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
+from django.utils import timezone
+import pytz
+
 @login_required(login_url='signin')
 def index(request):
     form = liker(request.POST or None,request.FILES or None)
@@ -357,6 +360,9 @@ def profile(request,pk):
     user_object=User.objects.get(username=pk)
     user_profile=Profile.objects.get(user=user_object)
     posts=Post.objects.filter(user=pk)
+    ist = pytz.timezone('Asia/Kolkata')
+    for post in posts:
+        post.tam = post.tam.astimezone(ist)
     noofposts=len(posts)
 
     follower=request.user.username

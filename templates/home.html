@@ -1,4 +1,6 @@
-{% load static %}<!doctype html>
+{% load static %}
+{% load tz %}
+{% load custom_filters %}<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -759,7 +761,7 @@ body{
           <button class="like" id="likebtn{{post.id}}" value="{{post.id}}" onclick="doaba(this.id)" ><i class="andi2 bi bi-hand-thumbs-up-fill"></i></button>
       <h5 class="card-title" id="l{{post.id}}">{{post.likes}}</h5></div></div>
 
-    <p>{{post.tam}}</p>
+    <p>{{ post.tam|humanize_timedelta }}</p>
     </div>
      
       
